@@ -16,7 +16,7 @@ function CardList() {
   return  (
     <div className='feedback-list'>
       <AnimatePresence>
-        {[{id:1, rating: 3,text:'heheooo'}].map((item) => (
+        {[{id:1, rating: 3,text:'heheooo', question: 'hello?'}].map((item) => (
           <motion.div
             key={item.id}
             initial={{ opacity: 0 }}

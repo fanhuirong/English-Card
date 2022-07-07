@@ -135,7 +135,7 @@ input:focus {
 }
 
 .close,
-.edit {
+.angle {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -144,8 +144,14 @@ input:focus {
   border: none;
 }
 
-.edit {
+.angle {
   right: 40px;
+}
+
+.text-display {
+  /* border-top: 2px dashed #000000; */
+  margin-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .btn {

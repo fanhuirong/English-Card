@@ -1,5 +1,5 @@
 import Card from "../common/Card"
-function QuizSelect({ select, selected }) {
+function QuizSelect({ length = 10 , select, selected }) {
   // NOTE: We don't need local state here as it's a duplicate of parent state
   // also no real need for useEffect or context
   // useEffect(() => {
@@ -14,7 +14,7 @@ function QuizSelect({ select, selected }) {
   return (
     <Card>
       <ul className='rating'>
-      {Array.from({ length: 10 }, (_, i) => (
+      {Array.from({ length }, (_, i) => (
         <li key={`rating-${i + 1}`}>
           <input
             type='radio'
