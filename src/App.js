@@ -1,16 +1,18 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { useState, useContext, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import CardList from './components/CardList';
 import QuizSelect from './components/QuizSelect';
 import Redirect from './components/Redirect';
+// TIPS: CardProvider not the default export, so need {} around it
+import { CardProvider } from './context/CardContext';
 
 function App() {
-    const [rating, setRating] = useState(10)
+  const [rating, setRating] = useState(10)
   return (
-    <div className="App">
+    <CardProvider>
       <Router>
         <Header />
         <div className='container'>
@@ -24,7 +26,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </div>
+    </CardProvider>
   );
 }
 
