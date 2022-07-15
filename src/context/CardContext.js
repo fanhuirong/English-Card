@@ -11,6 +11,16 @@ export const CardProvider = ({children}) => {
     item: {},
     edit: false,
   })
+
+  useEffect(() => {
+    fetchCardList()
+  }, []);
+
+  const fetchCardList = async () => {
+    const response = await fetch('http://localhost:5000/data')
+    const data = await response.json()
+    console.log(data)
+  }
   
   return <CardContext.Provider value={{cardList, isLoading }}> { children }</CardContext.Provider>
 }
